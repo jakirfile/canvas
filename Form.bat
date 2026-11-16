@@ -5652,7 +5652,7 @@ function Invoke-UploadSnapshot {
     if ($remoteCommit) {
       $commitArguments += @('-p', $remoteCommit)
     }
-    $commitArguments += @('-m', $(if ($OnlyPaths.Count -gt 0) { 'Upload selected files: ' + ($OnlyPaths -join ', ') } else { 'Upload project files' }))
+    $commitArguments += @('-m', 'Update')
     $uploadCommit = ((Invoke-Git -Arguments $commitArguments -IndexPath $indexPath).Output | Select-Object -First 1).Trim()
     if (-not $uploadCommit) {
       throw 'Git could not create the upload commit.'
