@@ -103,7 +103,11 @@ npm run dev        # http://localhost:3000
 npm run build      # static export to ./out
 ```
 
-The app is a static Next.js export. To host it under a sub-path (for example a GitHub Pages project site), set `NEXT_PUBLIC_BASE_PATH=/your-repo` at build time. `.github/workflows/deploy.yml` does this and publishes `out/` to GitHub Pages on every push to `main`.
+The app is a static Next.js export. To host it under a sub-path (for example a GitHub Pages project site), set `NEXT_PUBLIC_BASE_PATH=/your-repo` at build time. For the Cloudflare Workers deployment below, leave this variable unset.
+
+To deploy from a private GitHub repository to Cloudflare Workers, connect the repository under **Workers & Pages → Create application → GitHub**. Use `npm run build` as the build command and `npx wrangler deploy` as the deploy command. `wrangler.jsonc` publishes `out/` through the `canvas` Worker; do not set `NEXT_PUBLIC_BASE_PATH` for this root URL deployment. With the `jakirfile` Workers subdomain enabled, the URL is `https://canvas.jakirfile.workers.dev`.
+
+The Worker protects the site with a session-code login. In `Form.bat`, save and upload the `GITHUB_TOKEN` and `SESSION_CODE` values using the upload-arrow buttons in **Cloudflare secrets**. `SESSION_CODE` is the code visitors enter; `GITHUB_TOKEN` is used only as the server-side session-signing secret and is never sent to the browser. Never commit either value to Git.
 
 ## <img src="docs/readme/ui/icon-contribute.png" width="32" height="32" align="absmiddle" alt="" /> Contributing
 
