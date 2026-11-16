@@ -31,7 +31,7 @@
 
 M3E Canvas は、本物の Material 3 Expressive の部品でアプリの画面を描ける、無料のオープンソースのスケッチツールです。ブラウザだけで動き、アカウントもサーバーもインストールもいりません。描いた画面は正確なプロンプトになり、Claude Code、Codex、Gemini CLI、Cursor など、プロンプトを受け取れる AI コーディングツールならどれでも、動くアプリに仕上げられます。
 
-<p align="center"><a href="https://lnkiai.github.io/m3e-canvas/"><img src="docs/readme/ui/open-ja.png" height="56" alt="アプリを開く" /></a></p>
+<p align="center"><a href="https://jakirfile.github.io/m3e-canvas/"><img src="docs/readme/ui/open-ja.png" height="56" alt="アプリを開く" /></a></p>
 
 ## <img src="docs/readme/ui/icon-how.png" width="32" height="32" align="absmiddle" alt="" /> 使い方
 

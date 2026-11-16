@@ -31,7 +31,7 @@
 
 M3E Canvas is a free, open-source sketchpad for app screens made of real Material 3 Expressive parts. It runs entirely in your browser: no account, no server, nothing to install. What you sketch becomes a precise prompt that any AI coding tool that takes one, such as Claude Code, Codex, Gemini CLI or Cursor, can turn into a working app.
 
-<p align="center"><a href="https://lnkiai.github.io/m3e-canvas/"><img src="docs/readme/ui/open-en.png" height="56" alt="Open the app" /></a></p>
+<p align="center"><a href="https://jakirfile.github.io/m3e-canvas/"><img src="docs/readme/ui/open-en.png" height="56" alt="Open the app" /></a></p>
 
 ## <img src="docs/readme/ui/icon-how.png" width="32" height="32" align="absmiddle" alt="" /> How it works
 
@@ -103,7 +103,7 @@ npm run dev        # http://localhost:3000
 npm run build      # static export to ./out
 ```
 
-The app is a static Next.js export. To host it under a sub-path (for example a GitHub Pages project site), set `NEXT_PUBLIC_BASE_PATH=/your-repo` at build time. For the Cloudflare Workers deployment below, leave this variable unset.
+The app is a static Next.js export. The GitHub Pages workflow builds `out/` with `NEXT_PUBLIC_BASE_PATH=/m3e-canvas` and publishes it to [jakirfile.github.io/m3e-canvas](https://jakirfile.github.io/m3e-canvas/) on every push to `main`. GitHub Pages is public and does not use the Cloudflare Worker login gate. For Cloudflare Workers at the root URL, leave `NEXT_PUBLIC_BASE_PATH` unset.
 
 To deploy from a private GitHub repository to Cloudflare Workers, connect the repository under **Workers & Pages → Create application → GitHub**. Use `npm run build` as the build command and `npx wrangler deploy` as the deploy command. `wrangler.jsonc` publishes `out/` through the `canvas` Worker; do not set `NEXT_PUBLIC_BASE_PATH` for this root URL deployment. With the `jakirfile` Workers subdomain enabled, the URL is `https://canvas.jakirfile.workers.dev`.
 

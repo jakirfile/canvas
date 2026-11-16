@@ -31,7 +31,7 @@
 
 M3E Canvas 是一个免费、开源的应用界面草图工具，用的是真正的 Material 3 Expressive 组件。它完全在浏览器中运行：无需账号、无需服务器、无需安装。你画出的界面会变成一份精确的提示词，任何接受提示词的 AI 编程工具，例如 Claude Code、Codex、Gemini CLI 或 Cursor，都能据此做出能运行的应用。
 
-<p align="center"><a href="https://lnkiai.github.io/m3e-canvas/"><img src="docs/readme/ui/open-zh.png" height="56" alt="打开应用" /></a></p>
+<p align="center"><a href="https://jakirfile.github.io/m3e-canvas/"><img src="docs/readme/ui/open-zh.png" height="56" alt="打开应用" /></a></p>
 
 ## <img src="docs/readme/ui/icon-how.png" width="32" height="32" align="absmiddle" alt="" /> 使用方式
 
